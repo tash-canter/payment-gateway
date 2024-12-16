@@ -7,6 +7,17 @@ To run my solution:
   This will start the application on port 8080 and automatically create the SQLite database if it doesn't already exist. The app listens for HTTP requests and simulates a payment gateway system.
 - To test the API:
   - Make a POST request to /payments with the necessary card details (card number, expiry month and year, CVV, amount, currency).
+    Example JSON payload:
+    ```json
+    {
+      "card_number": "4539148803436467",
+      "expiry_month": 12,
+      "expiry_year": 2025,
+      "cvv": "123",
+      "amount": 100.5,
+      "currency": "USD"
+    }
+    ```
   - Make a GET request to /payments/{id}, where {id} is the unique payment ID returned when the payment was processed.
 
 Assumption:
